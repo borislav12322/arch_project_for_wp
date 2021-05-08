@@ -1,17 +1,51 @@
 .about{
+    padding-top: 64px;
+    padding-bottom: 64px;
     .about__container{
         @extend %container;
 
         .about__title{
-
+            max-width: 459px;
+            width: 100%;
+            font-family: "NY Extra Large Bold";
+            font-size: 48px;
+            line-height: 60px;
+            font-weight: 600;
+            margin-bottom: 40px;
         }
 
         .about__content{
             display: flex;
             align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            @media screen and (min-width: 1024px) {
+                flex-direction: row;
+                justify-content: space-evenly;
+            }
+
+            @media screen and (min-width: 1440px) {
+                justify-content: space-between;
+            }
+
+            
 
             .about__img{
-                margin-right: 155px;
+                margin-bottom: 50px;
+                width: 100%;
+                
+                @media screen and (min-width: 1024px) {
+                    margin-bottom: 0;
+                    margin-right: 50px;
+                    max-width: 530px;
+                    max-height: 610px;
+                }
+
+                @media screen and (min-width: 1375px) {
+                    margin-right: 155px;
+                }
+
             }
 
             .about__info{
@@ -22,9 +56,46 @@
                 .about__box{
                     display: flex;
                     align-items: flex-start;
+                    margin-bottom: 48px;
+
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
 
                     .about__icon{
                         margin-right: 40px;
+                    }
+
+                    .about__box-inner{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+
+                        @media screen and (min-width: 1024px) {
+                        max-width: 295px;
+                        width: 100%;
+                        }
+
+                        .about__subtitle{
+                            font-family: "SF Display UI Semibold";
+                            font-size: 16px;line-height: 26px;
+                            font-weight: 700;
+
+                        }
+
+                        .about__text{
+                            font-family: "SF Display UI Regular";
+                            font-size: 16px;line-height: 26px;
+                            font-weight: 400;
+                        }
+
+                        .about__btn{
+                            margin-top: 72px;
+                            min-height: 56px;
+                            padding: 0px 32px;
+                            background-color: #FD665E;
+                            color: #FFFFFF;
+                        }
                     }
                 }
             }
