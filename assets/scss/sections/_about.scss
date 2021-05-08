@@ -1,0 +1,33 @@
+.about{
+    .about__container{
+        @extend %container;
+
+        .about__title{
+
+        }
+
+        .about__content{
+            display: flex;
+            align-items: center;
+
+            .about__img{
+                margin-right: 155px;
+            }
+
+            .about__info{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+
+                .about__box{
+                    display: flex;
+                    align-items: flex-start;
+
+                    .about__icon{
+                        margin-right: 40px;
+                    }
+                }
+            }
+        }
+    }
+}

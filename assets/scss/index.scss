@@ -1,0 +1,57 @@
+@import './abstracts/vars';
+@import './abstracts/mixins';
+
+@font-face {
+    font-family: "NY Extra Large Bold";
+    src: url(../../assets/fonts/NewYorkExtraLargeBold.otf);
+}
+
+@font-face {
+    font-family: "SF Display UI Bold";
+    src: url('../fonts/SFUIDisplay-Bold.woff');
+}
+
+@font-face {
+    font-family: "SF Display UI Light";
+    src: url('../fonts/SFUIDisplay-Light.woff');
+}
+
+@font-face {
+    font-family: "SF Display UI Regular";
+    src: url('../fonts/SFUIDisplay-Regular.woff');
+}
+
+@font-face {
+    font-family: "SF Display UI Semibold";
+    src: url('../fonts/SFUIDisplay-Semibold.woff');
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.btn {
+    font-family: 'SF Display UI Regular';
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.text--red{
+    color: #FD665E;
+}
+
+@import './sections/header';
+@import './sections/main';
+@import './sections/gallery';
+@import './sections/about';
