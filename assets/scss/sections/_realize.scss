@@ -1,22 +1,23 @@
 .realize {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 26.38%, #FFFFFF 66.15%), url(../../images/realize/realize_bg.png);
+    display: flex;
+    justify-content: flex-end;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 26.38%, #FFFFFF 66.15%);
+    background-image: url(../../images/realize/realize_bg.png);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
-    // display: flex;
-    // justify-content: flex-end;
-    
-    
+
+
     .realize__container {
-        @extend %container;
+
+        // @extend %container;
         padding-top: 299px;
         padding-bottom: 273px;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        position: relative;
-        z-index: 100;
-        
+        width: 100%;
+        height: 100%;
+
 
         .realize__title {
             max-width: 535px;

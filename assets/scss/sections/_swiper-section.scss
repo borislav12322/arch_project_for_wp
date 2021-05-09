@@ -1,6 +1,6 @@
 .swiper{
-    // background: linear-gradient(180deg, #F9F9F9 22.12%, rgba(249, 249, 249, 0) 100%);
     @extend %container;
+    background: linear-gradient(180deg, #F9F9F9 22.12%, rgba(249, 249, 249, 0) 100%);
     
 
     .swiper__title{
