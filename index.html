@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/scss/index.min.css">
     <link rel="stylesheet" href="./normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"
+        integrity="sha512-+EoPw+Fiwh6eSeRK7zwIKG2MA8i3rV/DGa3tdttQGgWyatG/SkncT53KHQaS5Jh9MNOT3dmFL0FjTY08And/Cw=="
+        crossorigin="anonymous" />
     <title>Archmove</title>
 </head>
 
@@ -83,19 +86,41 @@
         </h2>
         <div class="gallery__photos">
 
-            <img src="./assets/images/gallery/gallery_photo_1.svg" alt="" class="gallery__img">
+            <a href="./assets/images/gallery/gallery_photo_1.svg" class="gallery__link" title="Kitchen">
+                <img src="./assets/images/gallery/gallery_photo_1.svg" alt="" class="gallery__img">
+            </a>
 
 
-            <img src="./assets/images/gallery/gallery_photo_2.svg" alt="" class="gallery__img">
+
+            <a href="./assets/images/gallery/gallery_photo_2.svg" class="gallery__link" title="Bad Room">
+                <img src="./assets/images/gallery/gallery_photo_2.svg" alt="" class="gallery__img">
+            </a>
 
 
-            <img src="./assets/images/gallery/gallery_photo_3.svg" alt="" class="gallery__img">
 
 
-            <img src="./assets/images/gallery/gallery_photo_4.svg" alt="" class="gallery__img">
+            <a href="./assets/images/gallery/gallery_photo_3.svg" class="gallery__link" title="Ladder">
+                <img src="./assets/images/gallery/gallery_photo_3.svg" alt="" class="gallery__img">
+            </a>
 
-            <img src="./assets/images/gallery/gallery_photo_5.svg" alt="" class="gallery__img">
-            <img src="./assets/images/gallery/gallery_photo_6.svg" alt="" class="gallery__img">
+
+
+
+            <a href="./assets/images/gallery/gallery_photo_4.svg" class="gallery__link" title="Kitchen">
+                <img src="./assets/images/gallery/gallery_photo_4.svg" alt="" class="gallery__img">
+            </a>
+
+
+
+            <a href="./assets/images/gallery/gallery_photo_5.svg" class="gallery__link" title="Kitchen">
+                <img src="./assets/images/gallery/gallery_photo_5.svg" alt="" class="gallery__img">
+            </a>
+
+
+
+            <a href="./assets/images/gallery/gallery_photo_6.svg" class="gallery__link" title="BadRoom">
+                <img src="./assets/images/gallery/gallery_photo_6.svg" alt="" class="gallery__img">
+            </a>
         </div>
     </section>
 
@@ -162,11 +187,11 @@
                         advertise our Petite cabin and receive feedback from people from all over the U.S. and even
                         further.
                     </p>
-                    
-                        <span class="slide__bottom-text">
-                            <span class="text--bold"> Adam Morph</span> — CEO A lfatech
-                        </span>
-                    
+
+                    <span class="slide__bottom-text">
+                        <span class="text--bold"> Adam Morph</span> — CEO A lfatech
+                    </span>
+
                 </div>
 
                 <div class="swiper__slide">
@@ -258,9 +283,35 @@
     <script src="./assets/js/slick.min.js"></script>
     <script scr="./assets/js/slick_slider.js"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"
+        integrity="sha512-IsNh5E3eYy3tr/JiX2Yx4vsCujtkhwl7SLqgnwLNgf04Hrt9BT9SXlLlZlWx+OK4ndzAoALhsMNcCmkggjZB1w=="
+        crossorigin="anonymous"></script>
+
     <script>
         $(document).ready(function () {
             $('.slider').slick();
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $('.gallery__photos').magnificPopup({
+                delegate: 'a',
+                type: 'image',
+                tLoading: 'Loading image #%curr%...',
+                mainClass: 'mfp-img-mobile',
+                gallery: {
+                    enabled: true,
+                    navigateByImgClick: true,
+                    preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+                },
+                image: {
+                    tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+                    titleSrc: function (item) {
+                        return item.el.attr('title');
+                    }
+                }
+            });
         });
     </script>
 </body>
