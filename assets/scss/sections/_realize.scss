@@ -1,16 +1,32 @@
 .realize {
-    background-image: url(../../images/realize/realize_bg.png);
-    display: flex;
-    justify-content: flex-end;
+background-image: none;
+display: flex;
+justify-content: center;
+padding-top: 50px;
+padding-bottom: 50px;
+
+    @media screen and (min-width:1200px) {
+        background-image: url(./assets/images/realize/realize_img.svg);
+        background-repeat: no-repeat;
+        background-position-x: 165px;
+        padding-top: 299px;
+        padding-bottom: 273px;
+        justify-content: flex-end;
+    }
 
 
     .realize__container {
         @extend %container;
-        padding-top: 299px;
-        padding-bottom: 273px;
+
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+
+        @media screen and (min-width:1200px) {
+            align-items: flex-end;
+        }
+
+
 
 
         .realize__title {
@@ -21,6 +37,11 @@
             line-height: 60px;
             font-weight: 600;
             margin-bottom: 64px;
+            text-align: center;
+
+            @media screen and (min-width:1200px){
+                text-align: left;
+            }
         }
 
         .realize__btn {

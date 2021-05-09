@@ -1,36 +1,54 @@
 .header {
     display: flex;
-    padding: 16px 25px 0px 25px;
+    padding: 24px 25px 24px 25px;
     margin-bottom: 48px;
-    
+    position: fixed;
+    z-index: 90000000;
+    top: 0;
+    width: 100%;
+    border-bottom: 1px solid lightgray;
+    background-color: #FFFFFF;
+
+
+
+    @media screen and (min-width: 480px) {
+        background: #FFFFFF;
+    }
 
     @media screen and (min-width: 768px) {
         padding: 28px 51px 28px 50px;
+        position: static;
+        border-bottom: none;
     }
+
+    @media screen and (min-width: 1024px) {}
+
 
     .header__logo {
         margin-right: 61px;
     }
 
     .header__menu {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        align-items: center;
+
+        @media screen and(min-width: 768px) {
             display: flex;
-            justify-content: flex-end;
-            width: 100%;
-            align-items: center;
-            
-            @media screen and(min-width: 768px) {
-                display: flex;
-                justify-content: space-between;
-            }
-        
+            justify-content: space-between;
+        }
+
         .header__nav {
 
 
             display: none;
+
             @media screen and(min-width: 768px) {
                 display: flex;
                 align-items: center;
             }
+
             .nav__list {
                 display: flex;
 
@@ -38,10 +56,10 @@
                 .nav__item {
                     margin-right: 20px;
 
-                    @media screen and (min-width: 916px) {
+                    @media screen and (min-width: 936px) {
                         margin-right: 48px;
                     }
-                    
+
 
                     &:last-child {
                         margin-right: 0;
@@ -52,11 +70,10 @@
                         font-size: 10px;
                         color: #585858;
 
-                        @media screen and
-                        (min-width: 818px) {
+                        @media screen and (min-width: 838px) {
                             font-size: 14px;
                         }
-                        
+
                     }
                 }
             }
@@ -65,14 +82,17 @@
         .header__user-box {
 
             display: none;
+            margin-right: 20px;
+
             @media screen and (min-width: 480px) {
-            display: flex;
-            align-items: center;
+                display: flex;
+                align-items: center;
             }
-            
+
 
             .header__icon-search {
                 margin-right: 10px;
+
                 @media screen and (min-width: 916px) {
                     margin-right: 24px;
                 }
@@ -97,15 +117,22 @@
 
         }
 
-        .header__btn-burger{
+        .header__btn-burger {
             width: 40px;
             height: 40px;
             border: none;
             background-color: transparent;
 
-            @media screen and (min-width: 480px) {
+            @media screen and (min-width: 768px) {
                 display: none;
             }
+        }
+    }
+
+    .header__mobile-menu{
+        width: 100%;
+        .mobile-menu__container{
+            
         }
     }
 }
