@@ -6,22 +6,45 @@
     flex-direction: column;
 
     .partners__title {
+        text-align: center;
         font-family: "NY Extra Large Bold";
         font-size: 48px;
         line-height: 60px;
         font-weight: 600;
         margin-bottom: 40px;
+
+
+        @media screen and (min-width:860px) {
+            text-align: left;
+        }
     }
 
-    .partners__logos-box{
+    .partners__logos-box {
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
 
 
 
-        @media screen and (min-width: 768px) {
-            
+
+        @media screen and (min-width: 860px) {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+
+        .partners__logo{
+            margin-bottom: 80px;
+
+            &:last-child{
+                margin-bottom: 0;
+            }
+
+            @media screen and (min-width: 860px) {
+                margin-bottom: 0;
+            }
         }
 
     }
