@@ -1,0 +1,59 @@
+.footer {
+    border-top: #F0F0F0 1px solid;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    @extend %container;
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (min-width: 768px) {
+        padding-top: 84px;
+        padding-bottom: 84px;
+    }
+
+    .footer__menu {
+
+        .footer__list {
+            display: flex;
+            flex-direction: column;
+
+            @media screen and (min-width: 768px) {
+                flex-direction: row;
+            }
+
+            .footer__item {
+                margin-bottom: 20px;
+                
+
+                @media screen and (min-width: 768px) {
+                    margin-right: 48px;
+                    margin-bottom: 0;
+                }
+
+
+
+                :last-child {
+                    @media screen and (min-width: 768px) {
+                        margin-right: 0;
+                    }
+
+
+                    
+                }
+
+                .footer__link {
+                    font-family: 'SF Display UI Regular';
+                    color: #585858;
+                    font-size: 18px;
+
+
+                    @media screen and (min-width: 768px) {
+                        font-size: 12px;
+                        line-height: 40px;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+}
