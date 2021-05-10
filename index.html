@@ -54,7 +54,6 @@
             </div>
 
             <button class="header__btn-burger">
-                
             </button>
         </div>
 
@@ -127,7 +126,7 @@
                 <img src="./assets/images/gallery/gallery_photo_3.svg" alt="" class="gallery__img">
             </a>
 
-            
+
             <a href="./assets/images/gallery/gallery_photo_4.svg" class="gallery__link" title="Kitchen">
                 <img src="./assets/images/gallery/gallery_photo_4.svg" alt="" class="gallery__img">
             </a>
@@ -309,42 +308,8 @@
         integrity="sha512-IsNh5E3eYy3tr/JiX2Yx4vsCujtkhwl7SLqgnwLNgf04Hrt9BT9SXlLlZlWx+OK4ndzAoALhsMNcCmkggjZB1w=="
         crossorigin="anonymous"></script>
 
-    <script>
-        $(document).ready(function () {
-            $('.slider').slick();
-        });
-    </script>
 
-    <script>
-        $(document).ready(function () {
-            $('.gallery__photos').magnificPopup({
-                delegate: 'a',
-                type: 'image',
-                tLoading: 'Loading image #%curr%...',
-                mainClass: 'mfp-img-mobile',
-                gallery: {
-                    enabled: true,
-                    navigateByImgClick: true,
-                    preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
-                },
-                image: {
-                    tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
-                    titleSrc: function (item) {
-                        return item.el.attr('title');
-                    }
-                }
-            });
-        });
-    </script>
-
-    <script>
-        $(document).ready(function () {
-            $('.header__btn-burger').click(function (event) {
-                $('.header__btn-burger, .header__mobile-menu, .mobile-menu').toggleClass('active');
-                $('body').toggleClass('lock');
-            });
-        });
-    </script>
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>

@@ -27,7 +27,7 @@
 
         @media screen and (min-width: 768px) {
             grid-auto-flow: row;
-            grid-auto-rows: minmax(432px auto);
+            grid-auto-rows: minmax(432px, auto);
             grid-template-columns: repeat(2, 1fr);
             gap: 20px;
             overflow-x: visible;
