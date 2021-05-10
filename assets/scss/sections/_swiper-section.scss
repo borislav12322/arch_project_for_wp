@@ -23,6 +23,10 @@
         display: flex;
         justify-content: flex-end;
 
+        @media screen and (min-width: 1750px){
+            justify-content: center;
+        }
+
 
         /* Слайдер */
         .slider {

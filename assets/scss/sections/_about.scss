@@ -1,10 +1,11 @@
-.about{
+.about {
     padding-top: 64px;
     padding-bottom: 64px;
-    .about__container{
+
+    .about__container {
         @extend %container;
 
-        .about__title{
+        .about__title {
             max-width: 459px;
             width: 100%;
             font-family: "NY Extra Large Bold";
@@ -14,7 +15,7 @@
             margin-bottom: 40px;
         }
 
-        .about__content{
+        .about__content {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -29,12 +30,16 @@
                 justify-content: space-between;
             }
 
-            
+            @media screen and (min-width: 1450px) {
+                justify-content: center;
+            }
 
-            .about__img{
+
+
+            .about__img {
                 margin-bottom: 50px;
                 width: 100%;
-                
+
                 @media screen and (min-width: 1024px) {
                     margin-bottom: 0;
                     margin-right: 50px;
@@ -48,48 +53,64 @@
 
             }
 
-            .about__info{
+            .about__info {
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
 
-                .about__box{
+                .about__box {
                     display: flex;
                     align-items: flex-start;
                     margin-bottom: 48px;
 
-                    &:last-child{
+                    &:last-child {
                         margin-bottom: 0;
                     }
 
-                    .about__icon{
+                    .about__icon {
                         margin-right: 40px;
                     }
 
-                    .about__box-inner{
+                    .about__box-inner {
                         display: flex;
                         flex-direction: column;
                         align-items: flex-start;
 
                         @media screen and (min-width: 1024px) {
-                        max-width: 295px;
-                        width: 100%;
+                            max-width: 295px;
+                            width: 100%;
                         }
 
-                        .about__subtitle{
+                        @media screen and (min-width: 1500px){
+                            max-width: 100%;
+                        }
+
+                        .about__subtitle {
                             font-family: "SF Display UI Semibold";
-                            font-size: 16px;line-height: 26px;
+                            font-size: 16px;
+                            line-height: 26px;
                             font-weight: 700;
 
+                            @media screen and (min-width: 1500px){
+                                font-size: 32px;
+                                line-height: 42px;
+                            }
+
                         }
 
-                        .about__text{
+                        .about__text {
                             font-family: "SF Display UI Regular";
-                            font-size: 16px;line-height: 26px;
+                            font-size: 16px;
+                            line-height: 26px;
                             font-weight: 400;
+
+                            @media screen and (min-width: 1500px){
+                                font-size: 32px;
+                                line-height: 42px;
+                            }
                         }
 
-                        .about__btn{
+                        .about__btn {
                             margin-top: 72px;
                             min-height: 56px;
                             padding: 0px 32px;
