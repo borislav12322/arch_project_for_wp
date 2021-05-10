@@ -90,7 +90,7 @@
                 align-items: center;
             }
 
-            @media screen and (min-width: 768px){
+            @media screen and (min-width: 768px) {
                 margin-right: 0;
             }
 
@@ -136,7 +136,7 @@
             }
         }
 
-        .header__btn-burger.active{
+        .header__btn-burger.active {
             width: 40px;
             height: 40px;
             background-image: url(./assets/images/header_and_footer/close_icon.svg);
@@ -171,6 +171,9 @@
 
 
         .mobile-menu__content {
+            display: flex;
+            flex-direction: column;
+
             .mobile-menu__list {
                 display: flex;
                 flex-direction: column;
@@ -186,9 +189,47 @@
                 }
             }
         }
+
+        .mobile-menu__user-inner {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            @media screen and (min-width: 480px) {
+                display: none;
+            }
+
+            .mobile-menu__btns-inner{
+                margin-bottom: 20px;
+            .mobile-menu__signin {
+                color: #585858;
+                min-height: 48px;
+                padding: 0px 24px;
+                background-color: transparent;
+                margin-right: 20px;
+                border: 1px solid lightgray;
+            }
+
+            .mobile-menu__signup{
+                min-height: 48px;
+                padding: 0px 24px;
+                color: #FFFFFF;
+                background-color: $secondaryColor;
+                font-weight: 600;
+            }
+        }
+
+        .mobile-menu-input{
+            border: 1px solid lightgray;
+            padding: 10px;
+            background-image: url(./assets/images/gallery/icon_gallery.svg);
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+    }
     }
 
-    .header__mobile-menu.active{
+    .header__mobile-menu.active {
         left: 0;
         top: 0;
         transition: all .3s ease 0s;
