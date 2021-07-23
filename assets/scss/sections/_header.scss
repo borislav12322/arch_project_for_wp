@@ -376,3 +376,128 @@
     display: flex;
     opacity: 1;
 }
+
+.form-signup{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999999;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    display: none;
+    opacity: 0;
+
+    &__close-btn{
+        position: absolute;
+        background-color: transparent;
+        top: 4px;
+        left: 4px;
+        width: 30px;
+        height: 30px;
+        background-image: url(./assets/images/header_and_footer/close-button.svg);
+        background-size: cover;
+        border: none;
+        border-radius: 50px;
+    }
+    
+
+   
+
+    .shadow{
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        opacity: 0.7;
+    }
+
+
+
+    &__box{
+    position: relative;
+    z-index: 9999999;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    opacity: 1;
+    z-index: 10000000;
+    
+    }
+
+    &__title {
+        font-size: 30px;
+        font-family: 'NY Extra Large Bold';
+        margin-bottom: 25px;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+
+
+    }
+
+    &__row {
+        position: relative;
+        margin-bottom: 20px;
+
+        input:focus+label,
+        input:not(:placeholder-shown)+label {
+            top: 0;
+            padding: 0 5px;
+            background-color: #FFFFFF;
+            transition: 0.2s ease all;
+
+        }
+
+        input::placeholder {
+            color: transparent;
+            font-family: 'SF Display UI Regular';
+        }
+
+        label {
+            position: absolute;
+            pointer-events: none;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: 0.2s ease all;
+        }
+    }
+
+
+    &__input {
+        background-color: transparent;
+        border: 1px solid lightgray;
+        min-height: 40px;
+        padding-left: 10px;
+        font-family: 'SF Display UI Regular';
+
+
+
+    }
+
+    
+
+    &__btn {
+        background-color: #FD665E;
+        color: #FFFFFF;
+        min-height: 56px;
+        padding: 0px 32px;
+    }
+
+}
+
+.form-signup.active{
+    display: flex;
+    opacity: 1;
+}

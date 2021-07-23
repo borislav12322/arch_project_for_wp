@@ -1,4 +1,80 @@
+const loginBtn = document.querySelector('.header__btn-signin');
+
+loginBtn.addEventListener('click', (e) =>{
+    const loginPopup = document.querySelector('.form-login');
+    const closeBtn = document.getElementById('btnFormClose');
+    loginPopup.classList.add('active');
+    closeBtn.addEventListener('click',() =>{
+        loginPopup.classList.remove('active');
+        e.preventDefault()
+    })
+    e.preventDefault()
+})
+const signUpBtn = document.querySelector('.header__btn-signup');
+
+signUpBtn.addEventListener('click', (e) =>{
+    const loginPopup = document.querySelector('.form-signup');
+    const closeBtn = document.getElementById('btnFormCloseRegister');
+    loginPopup.classList.add('active');
+    closeBtn.addEventListener('click',() =>{
+        loginPopup.classList.remove('active');
+        e.preventDefault()
+    })
+    e.preventDefault()
+})
+
+gsap.registerPlugin(ScrollTrigger);
+
+const imgsScroll = gsap.timeline({
+    scrollTrigger:{
+        trigger: ".gallery__title",
+        start: "center bottom",
+        end: "center top",
+        scrub: true,
+    }
+})
+
+
+
+const scrollTriggerImg = () =>{
+    imgsScroll.from('.gallery__link',{
+        duration: 4,
+    scale: 0.5, 
+    opacity: 0, 
+    delay: 3, 
+    stagger: 0.2,
+    ease: "elastic", 
+    force3D: true
+    })
+}
+
+const rowsScroll = gsap.timeline({
+    scrollTrigger:{
+        trigger: "#triggerBox",
+        start: "center bottom",
+        end: "center top",
+        scrub: true,
+    }
+})
+
+const scrollTriggerRows = () =>{
+    rowsScroll.from('.about__box',{
+    duration: 4,
+    x: 0,
+    opacity: 0, 
+    delay: 3, 
+    stagger: 0.2,
+    ease: "elastic", 
+    force3D: true
+    })
+}
+
+scrollTriggerImg();
+scrollTriggerRows();
+
 gsap.registerPlugin(ScrollToPlugin);
+
+
 
 document.querySelectorAll(".nav__link").forEach((btn, index) => {
     btn.addEventListener("click", () => {
@@ -11,6 +87,13 @@ document.querySelector('.footer__logo').addEventListener('click', () =>{
         y:'.header'
     }})
 })
+
+
+
+
+
+
+
 
         
         $(document).ready(function () {
@@ -49,18 +132,7 @@ document.querySelector('.footer__logo').addEventListener('click', () =>{
         });
     
 
-const loginBtn = document.querySelector('.header__btn-signin');
 
-loginBtn.addEventListener('click', (e) =>{
-    const loginPopup = document.querySelector('.form-login');
-    const closeBtn = document.getElementById('btnFormClose');
-    loginPopup.classList.add('active');
-    closeBtn.addEventListener('click',() =>{
-        loginPopup.classList.remove('active');
-        e.preventDefault()
-    })
-    e.preventDefault()
-})
 
 
 

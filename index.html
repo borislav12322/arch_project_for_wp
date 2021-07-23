@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./index.min.css">
     <link rel="stylesheet" href="./normalize.css">
+    <link rel="stylesheet" href="./index.min.css">
+    <link rel="icon" href="./assets//images/header_and_footer/logo-arch.svg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"
         integrity="sha512-+EoPw+Fiwh6eSeRK7zwIKG2MA8i3rV/DGa3tdttQGgWyatG/SkncT53KHQaS5Jh9MNOT3dmFL0FjTY08And/Cw=="
         crossorigin="anonymous" />
@@ -16,13 +17,50 @@
 <body>
 
     <header class="header">
+        <form action="" class="form-signup" id="signupForm">
+            <div class="shadow" id="shadow"></div>
+            <div class="form-signup__box" id="formBox">
+                <button type="button" class="form-signup__close-btn" id="btnFormCloseRegister"></button>
+                <h2 class="form-signup__title">
+                    Login
+                </h2>
+                <div class="form-signup__content">
+                    <div class="form-signup__row">
+                        <input type="text" class="form-signup__input" name="name" placeholder="Name" id="name">
+                        <label for="name" class="form-signup__label">Name</label>
+                    </div>
+                    <div class="form-signup__row">
+                        <input type="text" class="form-signup__input" name="surname" placeholder="Surname" id="surname">
+                        <label for="surname" class="form-signup__label">Surname</label>
+                    </div>
+                    <div class="form-signup__row">
+                        <input type="email" class="form-signup__input" name="email" placeholder="Email"
+                            id="emailRegiter">
+                        <label for="emailRegiter" class="form-signup__label">Email<label>
+                    </div>
+                    <div class="form-signup__row">
+                        <input type="password" placeholder="Password" class="form-login__input" name="passwordRegister"
+                            id="passwordRegister">
+                        <label for="password" class="form-signup__label">Password</label>
+                    </div>
+                    <div class="form-signup__row">
+                        <input type="password" placeholder="Password" class="form-login__input" name="passwordRegister"
+                            id="passwordRegisterRepeat">
+                        <label for="password" class="form-signup__label">Repeat Password</label>
+                    </div>
+
+                    <button class="form-signup__btn btn" type="submit" id="closeBtnFormRegister">Register</button>
+                </div>
+            </div>
+        </form>
+
         <form action="" class="form-login" id="loginForm">
-            <div class="shadow" id="shadow" ></div>
+            <div class="shadow" id="shadow"></div>
             <div class="form-login__box" id="formBox">
                 <button type="button" class="form-login__close-btn" id="btnFormClose"></button>
-                
+
                 <h2 class="form-login__title">
-                    LOGIN
+                    Register
                 </h2>
                 <div class="form-login__content">
                     <div class="form-login__row">
@@ -73,7 +111,6 @@
             </nav>
 
             <div class="header__user-box">
-                <img src="./assets/images/header_and_footer/search_icon.svg" alt="search" class="header__icon-search">
                 <button class="header__btn-signin btn" id="signinBtn">
                     Sign In
                 </button>
@@ -123,190 +160,192 @@
                             Sign up
                         </button>
                     </div>
-                    <input type="text" class="mobile-menu-input" placeholder="Search">
                 </div>
             </div>
         </div>
     </header>
 
-    <section class="main">
-        <div class="main__container">
-            <h2 class="main__title">Build Your
-                Dream <span class="text--red">House</span>
-            </h2>
-            <div class="main__content">
-                <div class="main__description">
-                    <p class="main__text">
-                        The first and most trusted marketplace of design & build house in The World. 100% guaranteed
-                        Build safe, comfortable and transparent with a project management for the best result
-                    </p>
-                    <button class="main__btn btn">
-                        Free Consultation
-                    </button>
-                </div>
-                <img src="./assets/images/main/main_photo.svg" alt="room" class="main__img">
-            </div>
-        </div>
-    </section>
-
-    <section class="gallery" id="section1">
-        <h2 class="gallery__title">
-            Build professional valuable room for you
-        </h2>
-        <div class="gallery__photos">
-
-            <a href="./assets/images/gallery/gallery_photo_1.svg" class="gallery__link" title="Kitchen">
-                <img src="./assets/images/gallery/gallery_photo_1.svg" alt="kitchen" class="gallery__img">
-            </a>
-
-            <a href="./assets/images/gallery/gallery_photo_2.svg" class="gallery__link" title="Bad Room">
-                <img src="./assets/images/gallery/gallery_photo_2.svg" alt="bedroom" class="gallery__img">
-            </a>
-
-            <a href="./assets/images/gallery/gallery_photo_3.svg" class="gallery__link" title="Ladder">
-                <img src="./assets/images/gallery/gallery_photo_3.svg" alt="ladder" class="gallery__img">
-            </a>
-
-
-            <a href="./assets/images/gallery/gallery_photo_4.svg" class="gallery__link" title="Kitchen">
-                <img src="./assets/images/gallery/gallery_photo_4.svg" alt="kitchen" class="gallery__img">
-            </a>
-
-
-
-            <a href="./assets/images/gallery/gallery_photo_5.svg" class="gallery__link" title="Kitchen">
-                <img src="./assets/images/gallery/gallery_photo_5.svg" alt="kitchen" class="gallery__img">
-            </a>
-
-
-
-            <a href="./assets/images/gallery/gallery_photo_6.svg" class="gallery__link" title="BadRoom">
-                <img src="./assets/images/gallery/gallery_photo_6.svg" alt="bedroom" class="gallery__img">
-            </a>
-        </div>
-    </section>
-
-    <section class="about" id="section2">
-        <div class="about__container">
-            <h2 class="about__title">
-                Build your needs with Archmove
-            </h2>
-            <div class="about__content">
-                <img src="./assets/images/about/about_img.svg" alt="people" class="about__img">
-                <div class="about__info">
-                    <div class="about__box">
-                        <img src="./assets/images/about/about_icon_1.svg" alt="access" class="about__icon">
-                        <div class="about__box-inner">
-                            <h3 class="about__subtitle">
-                                100% guaranteed project completion
-                            </h3>
-                            <p class="about__text">
-                                Build safe, comfortable and transparent with a project management application with a
-                                joint account.
-                            </p>
-                        </div>
+    <main class="main__content">
+        <div class="main">
+            <div class="main__container">
+                <h2 class="main__title">Build Your
+                    Dream <span class="text--red">House</span>
+                </h2>
+                <div class="main__content">
+                    <div class="main__description">
+                        <p class="main__text">
+                            The first and most trusted marketplace of design & build house in The World. 100% guaranteed
+                            Build safe, comfortable and transparent with a project management for the best result
+                        </p>
+                        <button class="main__btn btn">
+                            Free Consultation
+                        </button>
                     </div>
-                    <div class="about__box">
-                        <img src="./assets/images/about/about_icon_2.svg" alt="dollar" class="about__icon">
-                        <div class="about__box-inner">
-                            <h3 class="about__subtitle">
-                                No additional fees
-                            </h3>
-                            <p class="about__text">
-                                There are no hidden costs. The value of the offer you get is the value you paid.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="about__box">
-                        <img src="./assets/images/about/about_icon_3.svg" alt="arrow" class="about__icon">
-                        <div class="about__box-inner">
-                            <h3 class="about__subtitle">
-                                Get escort from the Team
-                            </h3>
-                            <p class="about__text">
-                                Monitor reports from the Arsitag team who check directly in the field.
-                            </p>
-                            <button class="about__btn btn">
-                                CONSULTATION
-                            </button>
-                        </div>
-                    </div>
-
+                    <img src="./assets/images/main/main_photo.png" alt="room" class="main__img">
                 </div>
             </div>
         </div>
-    </section>
 
-    <section class="swiper" id="section3">
-        <h2 class="swiper__title">
-            Sound Too Good To Be True?
-        </h2>
-        <div class="slider__wrapper">
-            <div class="slider">
-                <div class="swiper__slide">
-                    <p class="slide__text">
-                        We just wanted to thank you for this fantastic website! We are so grateful for being able to
-                        advertise our Petite cabin and receive feedback from people from all over the U.S. and even
-                        further.
-                    </p>
 
-                    <span class="slide__bottom-text">
-                        <span class="text--bold"> Adam Morph</span> — CEO A lfatech
-                    </span>
+        <section class="gallery" id="section1">
+            <h2 class="gallery__title">
+                Build professional valuable room for you
+            </h2>
+            <div class="gallery__photos">
 
+                <a href="./assets/images/gallery/gallery_photo_1.png" class="gallery__link" title="Kitchen">
+                    <img src="./assets/images/gallery/gallery_photo_1.png" alt="kitchen" class="gallery__img">
+                </a>
+
+                <a href="./assets/images/gallery/gallery_photo_2.png" class="gallery__link" title="Bad Room">
+                    <img src="./assets/images/gallery/gallery_photo_2.png" alt="bedroom" class="gallery__img">
+                </a>
+
+                <a href="./assets/images/gallery/gallery_photo_3.png" class="gallery__link" title="Ladder">
+                    <img src="./assets/images/gallery/gallery_photo_3.png" alt="ladder" class="gallery__img">
+                </a>
+
+
+                <a href="./assets/images/gallery/gallery_photo_4.png" class="gallery__link" title="Kitchen">
+                    <img src="./assets/images/gallery/gallery_photo_4.png" alt="kitchen" class="gallery__img">
+                </a>
+
+
+
+                <a href="./assets/images/gallery/gallery_photo_5.png" class="gallery__link" title="Kitchen">
+                    <img src="./assets/images/gallery/gallery_photo_5.png" alt="kitchen" class="gallery__img">
+                </a>
+
+
+
+                <a href="./assets/images/gallery/gallery_photo_6.png" class="gallery__link" title="BadRoom">
+                    <img src="./assets/images/gallery/gallery_photo_6.png" alt="bedroom" class="gallery__img">
+                </a>
+            </div>
+        </section>
+
+        <section class="about" id="section2">
+            <div class="about__container">
+                <h2 class="about__title">
+                    Build your needs with Archmove
+                </h2>
+                <div class="about__content">
+                    <img src="./assets/images/about/about_img.png" alt="people" class="about__img">
+                    <div class="about__info">
+                        <div class="about__box">
+                            <img src="./assets/images/about/about_icon_1.svg" alt="access" class="about__icon">
+                            <div class="about__box-inner">
+                                <h3 class="about__subtitle">
+                                    100% guaranteed project completion
+                                </h3>
+                                <p class="about__text">
+                                    Build safe, comfortable and transparent with a project management application with a
+                                    joint account.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="about__box" id="triggerBox">
+                            <img src="./assets/images/about/about_icon_2.svg" alt="dollar" class="about__icon">
+                            <div class="about__box-inner">
+                                <h3 class="about__subtitle">
+                                    No additional fees
+                                </h3>
+                                <p class="about__text">
+                                    There are no hidden costs. The value of the offer you get is the value you paid.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="about__box">
+                            <img src="./assets/images/about/about_icon_3.svg" alt="arrow" class="about__icon">
+                            <div class="about__box-inner">
+                                <h3 class="about__subtitle">
+                                    Get escort from the Team
+                                </h3>
+                                <p class="about__text">
+                                    Monitor reports from the Arsitag team who check directly in the field.
+                                </p>
+                                <button class="about__btn btn">
+                                    CONSULTATION
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
+            </div>
+        </section>
 
-                <div class="swiper__slide">
-                    <p class="slide__text">
-                        We just wanted to thank you for this fantastic website! We are so grateful for being able to
-                        advertise our Petite cabin and receive feedback from people from all over the U.S. and even
-                        further.
-                    </p>
-                    <div class="slide__bottom">
+        <section class="swiper" id="section3">
+            <h2 class="swiper__title">
+                Sound Too Good To Be True?
+            </h2>
+            <div class="slider__wrapper">
+                <div class="slider">
+                    <div class="swiper__slide">
+                        <p class="slide__text">
+                            We just wanted to thank you for this fantastic website! We are so grateful for being able to
+                            advertise our Petite cabin and receive feedback from people from all over the U.S. and even
+                            further.
+                        </p>
+
+                        <span class="slide__bottom-text">
+                            <span class="text--bold"> Adam Morph</span> — CEO A lfatech
+                        </span>
+
+                    </div>
+
+                    <div class="swiper__slide">
+                        <p class="slide__text">
+                            We just wanted to thank you for this fantastic website! We are so grateful for being able to
+                            advertise our Petite cabin and receive feedback from people from all over the U.S. and even
+                            further.
+                        </p>
+                        <div class="slide__bottom">
+                            <span class="slide__bottom-text">
+                                <span class="text--bold"> Adam Morph</span> — CEO A lfatech
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="swiper__slide">
+                        <p class="slide__text">
+                            We just wanted to thank you for this fantastic website! We are so grateful for being able to
+                            advertise our Petite cabin and receive feedback from people from all over the U.S. and even
+                            further.
+                        </p>
                         <span class="slide__bottom-text">
                             <span class="text--bold"> Adam Morph</span> — CEO A lfatech
                         </span>
                     </div>
                 </div>
-
-                <div class="swiper__slide">
-                    <p class="slide__text">
-                        We just wanted to thank you for this fantastic website! We are so grateful for being able to
-                        advertise our Petite cabin and receive feedback from people from all over the U.S. and even
-                        further.
-                    </p>
-                    <span class="slide__bottom-text">
-                        <span class="text--bold"> Adam Morph</span> — CEO A lfatech
-                    </span>
-                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="realize" id="section4">
-        <div class="realize__container">
-            <h2 class="realize__title title">
-                Realize your dream project with
-                <span class="text--red">Archmove</span>
+        <section class="realize" id="section4">
+            <div class="realize__container">
+                <h2 class="realize__title title">
+                    Realize your dream project with
+                    <span class="text--red">Archmove</span>
+                </h2>
+                <button class="realize__btn btn">
+                    FREE CONSULTATION
+                </button>
+            </div>
+        </section>
+
+        <section class="partners">
+            <h2 class="partners__title">
+                Our Partners
             </h2>
-            <button class="realize__btn btn">
-                FREE CONSULTATION
-            </button>
-        </div>
-    </section>
-
-    <section class="partners">
-        <h2 class="partners__title">
-            Our Partners
-        </h2>
-        <div class="partners__logos-box">
-            <img src="./assets/images/partners/partners_logo_1.svg" alt="AIA" class="partners__logo">
-            <img src="./assets/images/partners/partners_logo_2.svg" alt="MA" class="partners__logo">
-            <img src="./assets/images/partners/partners_logo_3.svg" alt="ASLA" class="partners__logo">
-            <img src="./assets/images/partners/partners_logo_4.svg" alt="STIR" class="partners__logo">
-            <img src="./assets/images/partners/partners_logo_5.svg" alt="MA" class="partners__logo">
-        </div>
-    </section>
+            <div class="partners__logos-box">
+                <img src="./assets/images/partners/partners_logo_1.svg" alt="AIA" class="partners__logo">
+                <img src="./assets/images/partners/partners_logo_2.svg" alt="MA" class="partners__logo">
+                <img src="./assets/images/partners/partners_logo_3.svg" alt="ASLA" class="partners__logo">
+                <img src="./assets/images/partners/partners_logo_4.svg" alt="STIR" class="partners__logo">
+                <img src="./assets/images/partners/partners_logo_5.svg" alt="MA" class="partners__logo">
+            </div>
+        </section>
+    </main>
 
     <footer class="footer">
         <nav class="footer__menu">
@@ -345,7 +384,9 @@
     <script src="./assets/js/slick.min.js"></script>
     <script scr="./assets/js/slick_slider.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollToPlugin.min.js"></script>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"
         integrity="sha512-IsNh5E3eYy3tr/JiX2Yx4vsCujtkhwl7SLqgnwLNgf04Hrt9BT9SXlLlZlWx+OK4ndzAoALhsMNcCmkggjZB1w=="
         crossorigin="anonymous"></script>
