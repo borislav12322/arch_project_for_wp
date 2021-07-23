@@ -8,6 +8,7 @@
     width: 100%;
     border-bottom: 1px solid lightgray;
     background-color: #FFFFFF;
+    position: relative;
 
 
 
@@ -22,7 +23,6 @@
         border-bottom: none;
     }
 
-    @media screen and (min-width: 1024px) {}
 
 
     .header__logo {
@@ -70,6 +70,12 @@
                         font-family: 'SF Display UI Regular';
                         font-size: 10px;
                         color: #585858;
+                        transition: all .5s ease;
+
+                        &:hover {
+                            color: #212529;
+                            transition: all .5s ease;
+                        }
 
                         @media screen and (min-width: 838px) {
                             font-size: 14px;
@@ -159,7 +165,7 @@
         padding-right: 20px;
         overflow: auto;
         border-right: 1px solid lightgray;
-        transition: all .3s ease 0s;
+        transition: all 1s ease 0s;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -203,37 +209,170 @@
                 display: none;
             }
 
-            .mobile-menu__btns-inner{
+            .mobile-menu__btns-inner {
                 margin-bottom: 20px;
-            .mobile-menu__signin {
-                color: #585858;
-                min-height: 48px;
-                padding: 0px 24px;
-                background-color: transparent;
-                margin-right: 20px;
+
+                .mobile-menu__signin {
+                    color: #585858;
+                    min-height: 48px;
+                    padding: 0px 24px;
+                    background-color: transparent;
+                    margin-right: 20px;
+                    border: 1px solid lightgray;
+                }
+
+                .mobile-menu__signup {
+                    min-height: 48px;
+                    padding: 0px 24px;
+                    color: #FFFFFF;
+                    background-color: $secondaryColor;
+                    font-weight: 600;
+                }
+            }
+
+            .mobile-menu-input {
                 border: 1px solid lightgray;
-            }
-
-            .mobile-menu__signup{
-                min-height: 48px;
-                padding: 0px 24px;
-                color: #FFFFFF;
-                background-color: $secondaryColor;
-                font-weight: 600;
+                padding: 10px;
+                width: 100%;
             }
         }
-
-        .mobile-menu-input{
-            border: 1px solid lightgray;
-            padding: 10px;
-            width: 100%;
-        }
-    }
     }
 
     .header__mobile-menu.active {
         left: 0;
         top: 0;
-        transition: all .3s ease 0s;
+        transition: all 1s ease 0s;
     }
+}
+
+
+.form-login {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999999;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    display: none;
+    opacity: 0;
+
+    &__close-btn{
+        position: absolute;
+        background-color: transparent;
+        top: 4px;
+        left: 4px;
+        width: 30px;
+        height: 30px;
+        background-image: url(./assets/images/header_and_footer/close-button.svg);
+        background-size: cover;
+        border: none;
+        border-radius: 50px;
+    }
+    
+
+   
+
+    .shadow{
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        opacity: 0.7;
+    }
+
+
+
+    &__box{
+    position: relative;
+    z-index: 9999999;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    opacity: 1;
+    z-index: 10000000;
+    
+    }
+
+    &__title {
+        font-size: 30px;
+        font-family: 'NY Extra Large Bold';
+        margin-bottom: 25px;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+
+
+    }
+
+    &__row {
+        position: relative;
+        margin-bottom: 20px;
+
+        input:focus+label,
+        input:not(:placeholder-shown)+label {
+            top: 0;
+            padding: 0 5px;
+            background-color: #FFFFFF;
+            transition: 0.2s ease all;
+
+        }
+
+        input::placeholder {
+            color: transparent;
+            font-family: 'SF Display UI Regular';
+        }
+
+        label {
+            position: absolute;
+            pointer-events: none;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: 0.2s ease all;
+        }
+    }
+
+
+    &__input {
+        background-color: transparent;
+        border: 1px solid lightgray;
+        min-height: 40px;
+        padding-left: 10px;
+        font-family: 'SF Display UI Regular';
+
+
+
+    }
+
+    .form-login__link{
+        font-family: 'SF Display UI Regular';
+        margin-bottom: 30px;
+    }
+
+    .form-login__btn {
+        background-color: #FD665E;
+        color: #FFFFFF;
+        min-height: 56px;
+        padding: 0px 32px;
+    }
+
+
+
+
+}
+
+.form-login.active{
+    display: flex;
+    opacity: 1;
 }

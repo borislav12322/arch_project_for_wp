@@ -1,4 +1,18 @@
+gsap.registerPlugin(ScrollToPlugin);
 
+document.querySelectorAll(".nav__link").forEach((btn, index) => {
+    btn.addEventListener("click", () => {
+      gsap.to(window, {duration: 1, scrollTo:{y:"#section" + (index + 1)}});
+    });
+  });
+
+document.querySelector('.footer__logo').addEventListener('click', () =>{
+    gsap.to(window, {duration: 1, scrollTo:{
+        y:'.header'
+    }})
+})
+
+        
         $(document).ready(function () {
             $('.slider').slick();
         });
@@ -34,3 +48,19 @@
             });
         });
     
+
+const loginBtn = document.querySelector('.header__btn-signin');
+
+loginBtn.addEventListener('click', (e) =>{
+    const loginPopup = document.querySelector('.form-login');
+    const closeBtn = document.getElementById('btnFormClose');
+    loginPopup.classList.add('active');
+    closeBtn.addEventListener('click',() =>{
+        loginPopup.classList.remove('active');
+        e.preventDefault()
+    })
+    e.preventDefault()
+})
+
+
+
