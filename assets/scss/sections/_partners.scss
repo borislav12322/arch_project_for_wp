@@ -35,7 +35,7 @@
         }
 
 
-        .partners__logo{
+        .partners__img{
             margin-bottom: 80px;
 
             &:last-child{
@@ -44,6 +44,16 @@
 
             @media screen and (min-width: 860px) {
                 margin-bottom: 0;
+            }
+        }
+
+        .parnters__logo{
+            fill: #D6DAE5;
+            transition: all .5s ease-in-out;
+            &:hover{
+                fill: black;
+                transition: all .5s ease-in-out;
+
             }
         }
 
