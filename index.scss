@@ -4,26 +4,31 @@
 @font-face {
     font-family: "NY Extra Large Bold";
     src: url(./assets/fonts/NewYorkExtraLargeBold.otf);
+    font-display: swap;
 }
 
 @font-face {
     font-family: "SF Display UI Bold";
     src: url('./assets/fonts/SFUIDisplay-Bold.woff');
+    font-display: swap;
 }
 
 @font-face {
     font-family: "SF Display UI Light";
     src: url('./assets/fonts/SFUIDisplay-Light.woff');
+    font-display: swap;
 }
 
 @font-face {
     font-family: "SF Display UI Regular";
     src: url('./assets/fonts/SFUIDisplay-Regular.woff');
+    font-display: swap;
 }
 
 @font-face {
     font-family: "SF Display UI Semibold";
     src: url('./assets/fonts/SFUIDisplay-Semibold.woff');
+    font-display: swap;
 }
 
 body.lock {
