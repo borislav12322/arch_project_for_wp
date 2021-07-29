@@ -25,48 +25,32 @@ signUpBtn.addEventListener('click', (e) =>{
 
 gsap.registerPlugin(ScrollTrigger);
 
-const imgsScroll = gsap.timeline({
-    scrollTrigger:{
-        trigger: ".gallery__title",
-        start: "center bottom",
-        end: "center top",
-        scrub: true,
-    }
-})
-
-
+ScrollTrigger.defaults({
+    toggleActions: "restart pause resume pause"
+});
 
 const scrollTriggerImg = () =>{
-    imgsScroll.from('.gallery__link',{
-        duration: 4,
-    scale: 0.5, 
-    opacity: 0, 
-    delay: 3, 
-    stagger: 0.2,
-    ease: "elastic", 
-    force3D: true
-    })
+    gsap.from(".about__box", {
+        scrollTrigger: ".about",
+        duration: 2,
+        x: 300,
+        opacity: 0, 
+        delay: 0.5, 
+        stagger: 0.2,
+        ease: "back", 
+    });
 }
 
-const rowsScroll = gsap.timeline({
-    scrollTrigger:{
-        trigger: "#triggerBox",
-        start: "center bottom",
-        end: "center top",
-        scrub: true,
-    }
-})
-
 const scrollTriggerRows = () =>{
-    rowsScroll.from('.about__box',{
-    duration: 4,
-    x: 0,
-    opacity: 0, 
-    delay: 3, 
-    stagger: 0.2,
-    ease: "elastic", 
-    force3D: true
-    })
+    gsap.from(".gallery__link", {
+        scrollTrigger: ".gallery",
+        duration: 2,
+        scale: 0.5, 
+        opacity: 0, 
+        delay: 0.5, 
+        stagger: 0.2,
+        ease: "bounce", 
+    });
 }
 
 scrollTriggerImg();
